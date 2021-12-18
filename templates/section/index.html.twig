@@ -31,7 +31,8 @@
                 <td>{{ section.type }}</td>
                 <td>
                     <a class="btn btn-info" href="{{ path('show_section', {'id': section.id}) }}">show</a>
-                    <a class="btn btn-danger"  href="{{ path('update_section', {'id': section.id}) }}">edit</a>
+                    <a class="btn btn-warning"  href="{{ path('update_section', {'id': section.id}) }}">edit</a>
+                    <a class="btn btn-danger"  href="{{ path('delete_section', {'id': section.id}) }}">Delete</a>
                 </td>
             </tr>
         {% else %}

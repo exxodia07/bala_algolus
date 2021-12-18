@@ -44,16 +44,20 @@ class SectionController extends AbstractController
     public function addSection()
     {
         return $this->render('section/new.html.twig');
+
+        $section = new Section();
+
     }
 
     /*
      * had route bach tmodifyi la section
      * */
     /**
-     * @Route("/updatesection", name="update_section")
+     * @Route("/updatesection/{id}", name="update_section")
      */
-    public function updateSection()
+    public function updateSection($id)
     {
+        $section = $this->getDoctrine()->getRepository(Section::class)->find($id);
         return $this->render('section/edit.html.twig');
     }
 
@@ -69,5 +73,20 @@ class SectionController extends AbstractController
         return $this->render('section/show.html.twig', [
             'section' => $section,
         ]);
+    }
+
+    /*
+ * route bach tsuprimi sectuion
+ * */
+    /**
+     * @Route("/deletesection/{id}", name="delete_section")
+     */
+    public function deleteSection($id, EntityManagerInterface $em)
+    {
+        $section = $em->getRepository(Section::class)->find($id);
+       // dd($section);
+        $em->remove($section);
+        $em->flush();
+        return $this->redirectToRoute('section_table');
     }
 }
