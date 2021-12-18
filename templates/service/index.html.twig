@@ -1,0 +1,55 @@
+{% extends "basedash.html.twig" %}
+{% block title %}
+	Mise à jour
+{% endblock %}
+{% block body %}
+	<div class="page-body">
+		<form action="" method="post">
+    <div class="card-block col-6">
+
+        <h4 class="sub-title">Modifier les information de la page service</h4>
+        <div class="form-group has-success row">
+            <div class="col-sm-2">
+                <label class="col-form-label" for="inputSuccess1">
+                    titre 
+                </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="text" name="titre_service" class="form-control form-control-success" id="titre_service"
+                     value="" required>
+                      
+            </div>
+        </div>
+
+        <div class="form-group has-success row">
+            <div class="col-sm-2">
+                <label class="col-form-label" for="inputSuccess1">
+                    description
+                </label>
+            </div>
+            <div class="col-sm-10">
+                <textarea name="description_service" class="form-control form-control-success" id="description_service" rows="4" required>
+                          
+                </textarea>
+            </div>
+        </div>
+        <div class="form-group has-success row">
+            <div class="col-sm-2">
+                <label class="col-form-label" for="inputSuccess1">
+                    contenu
+                </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="text" name="contenu_description" class="form-control form-control-success" id="contenu_description"   value="  " required  >
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success alert-success-msg m-b-10">
+            Update
+        </button>
+
+    </div>
+</form>
+
+	</div>
+{% endblock %}
