@@ -38,9 +38,8 @@
         </tbody>
     </table>
 
-    <a href="{{ path('section_index') }}">back to list</a>
+    <a href="{{ path('section_table') }}">back to list</a>
 
-    <a href="{{ path('section_edit', {'id': section.id}) }}">edit</a>
+    <a href="{{ path('update_section', {'id': section.id}) }}">edit</a>
 
-    {{ include('section/_delete_form.html.twig') }}
 {% endblock %}
