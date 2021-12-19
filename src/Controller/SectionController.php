@@ -19,7 +19,8 @@ class SectionController extends AbstractController
 {
 
     /*
-     * had route katdik l la page dial sections w katreturnilk ga3 les sections li kaynin f la base se donnée
+     * 
+     * had route katdi l la page dial sections w katreturni ga3 les sections li kaynin f la base se donnée
      * */
     /**
      * @Route("/section", name="section_table")
